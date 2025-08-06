@@ -24,35 +24,36 @@
             margin-bottom: 8px;
             font-size: 2em;
         }
-        h2 {
-            color: #17408b;
+        .lesson-header {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
             border-left: 5px solid #2368db;
             padding-left: 12px;
-            margin-top: 30px;
-            margin-bottom: 10px;
             font-size: 1.3em;
-        }
-        ul {
-            margin-top: 6px;
-            margin-bottom: 12px;
-        }
-        .emph {
-            color: #e55353;
+            color: #17408b;
+            margin: 30px 0 10px 0;
             font-weight: bold;
         }
-        .video-list li {
-            margin-bottom: 7px;
+        .arrow {
+            transition: transform 0.2s;
+            margin-right: 8px;
+            font-size: 1.1em;
         }
-        .homework {
-            color: #e55353;
-            margin-bottom: 5px;
-            font-size: 1.05em;
+        .lesson-content {
+            margin-left: 22px;
+            margin-bottom: 18px;
         }
-        .point-list li {
-            margin-bottom: 5px;
+        .section-title {
+            color: #2a6bb6;
+            font-weight: bold;
+            margin-top: 18px;
+            margin-bottom: 6px;
+            font-size: 1.08em;
         }
         .section-title1 {
-        	  background: #f9f1e7;
+            background: #f9f1e7;
             border-left: 5px solid #f4b183;
             margin: 10px 0 15px 0;
             padding: 10px 14px;
@@ -62,12 +63,16 @@
             margin-bottom: 6px;
             font-size: 1.08em;
         }
-        .section-title {
-            color: #2a6bb6;
-            font-weight: bold;
-            margin-top: 18px;
-            margin-bottom: 6px;
-            font-size: 1.08em;
+        .video-list li {
+            margin-bottom: 7px;
+        }
+        .point-list li {
+            margin-bottom: 5px;
+        }
+        .homework {
+            color: #e55353;
+            margin-bottom: 5px;
+            font-size: 1.05em;
         }
         @media (max-width: 600px) {
             .container { padding: 10px; }
@@ -78,109 +83,117 @@
 <body>
     <div class="container">
         <h1>8月数学新课学习计划表</h1>
-        <h2>第1课：直线方程</h2>
         
-        <div class="section-title">课程时间：2025/8/7  18：00-20：00</div>
-        <div class="section-title1">课前预习任务：</div>
-        <div class="section-title">1、观看视频：</div>
-        <ul class="video-list">
-            <li>
-                <a href="https://www.bilibili.com/video/BV147411K7xu?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29&p=153" target="_blank">
-                [直线与圆]1 直线倾斜角与斜率
-                </a>
-            </li>
-            <li>
-                <a href="https://www.bilibili.com/video/BV147411K7xu?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29&p=154" target="_blank">
-                [直线与圆]2 直线的方程
-                </a>
-            </li>
-            <li>
-                <a href="https://www.bilibili.com/video/BV147411K7xu?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29&p=155" target="_blank">
-                [直线与圆]3 交点坐标与距离公式
-                </a>
-            </li>
-        </ul>
+        <!-- 第1课 -->
+        <div class="lesson-header" onclick="toggleLesson('1')">
+            <span class="arrow" id="arrow-1">▼</span>
+            第1课：直线方程
+        </div>
+        <div class="lesson-content" id="lesson-content-1">
+            <div class="section-title">课程时间：2025/8/7  18：00-20：00</div>
+            <div class="section-title1">课前预习任务：</div>
+            <div class="section-title">1、观看视频：</div>
+            <ul class="video-list">
+                <li>
+                    <a href="https://www.bilibili.com/video/BV147411K7xu?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29&p=153" target="_blank">
+                    [直线与圆]1 直线倾斜角与斜率
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bilibili.com/video/BV147411K7xu?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29&p=154" target="_blank">
+                    [直线与圆]2 直线的方程
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bilibili.com/video/BV147411K7xu?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29&p=155" target="_blank">
+                    [直线与圆]3 交点坐标与距离公式
+                    </a>
+                </li>
+            </ul>
 
-        <div class="section-title">2、重点掌握：斜率几何意义、方程互化、位置关系</div>
-        <ul class="point-list">
-            <li>斜率定义与计算（含斜率不存在情况）</li>
-            <li>点斜式、斜截式推导与应用（练：已知点与斜率/截距写方程）</li>
-            <li>两直线平行与垂直的判定（k₁=k₂ vs k₁·k₂=-1）</li>
-            <li>两点式、截距式适用条件与互化技巧</li>
-            <li>直线交点坐标求解（联立方程组）</li>
-            <li>距离公式：点到直线距离（|Ax₀+By₀+C|/√(A²+B²)）、平行线间距离</li>
-        </ul>
+            <div class="section-title">2、重点掌握：斜率几何意义、方程互化、位置关系</div>
+            <ul class="point-list">
+                <li>斜率定义与计算（含斜率不存在情况）</li>
+                <li>点斜式、斜截式推导与应用（练：已知点与斜率/截距写方程）</li>
+                <li>两直线平行与垂直的判定（k₁=k₂ vs k₁·k₂=-1）</li>
+                <li>两点式、截距式适用条件与互化技巧</li>
+                <li>直线交点坐标求解（联立方程组）</li>
+                <li>距离公式：点到直线距离（|Ax₀+By₀+C|/√(A²+B²)）、平行线间距离</li>
+            </ul>
 
-        <div class="section-title">3、作业：</div>
-        <ul class="homework">
-            <li>学习涂教材第二章直线和圆的方程 2.1、2.2、2.3中的知识点并完成例题。</li>
-        </ul>
+            <div class="section-title">3、作业：</div>
+            <ul class="homework">
+                <li>学习涂教材第二章直线和圆的方程 2.1、2.2、2.3中的知识点并完成例题。</li>
+            </ul>
+        </div>
+        
+        <!-- 第2课 -->
+        <div class="lesson-header" onclick="toggleLesson('2')">
+            <span class="arrow" id="arrow-2">▼</span>
+            第2课：圆的方程
+        </div>
+        <div class="lesson-content" id="lesson-content-2">
+        	<div class="section-title">课程时间：</div>
+            <div class="section-title1">课前预习任务：</div>
+            <div class="section-title">1、观看视频：</div>
+            <ul class="video-list">
+                <li>
+                    <a href="https://www.bilibili.com/video/BV147411K7xu?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29&p=156" target="_blank">
+                    [直线与圆]4 圆的标准方程
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bilibili.com/video/BV147411K7xu?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29&p=157" target="_blank">
+                    [直线与圆]5 圆的一般方程
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bilibili.com/video/BV147411K7xu?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29&p=158" target="_blank">
+                    [直线与圆]6 直线与圆位置关系
+                    </a>
+                </li>
+            </ul>
+
+            <div class="section-title">2、重点掌握：标准方程与一般方程转化、圆的几何性质</div>
+            <ul class="point-list">
+                 <li>圆的标准方程 (x-a)²+(y-b)²=r² 推导（几何定义）</li>
+                 <li>圆的一般方程 x²+y²+Dx+Ey+F=0 → 配方法求圆心半径</li>
+                 <li>点/直线与圆的位置关系（代数法：Δ&gt;0,=0,&lt;0；几何法：d vs r）</li>
+                 <li>圆的对称性应用（圆心在直线/点上）</li>
+                 <li>弦长问题：垂径定理 + 弦长公式 √(1+k²)·|x₁-x₂|</li>
+                 <li>综合应用：求过圆上一点的切线方程（活用圆心连线⊥切线）</li>
+            </ul>
+
+            <div class="section-title">3、作业：</div>
+            <!--
+            <ul class="homework">
+                <li>学习涂教材2.4、2.5.1中的知识点并完成例题。</li>
+            </ul>
+            -->
+        </div>
+
  
-        <!-- 这是注释内容
-        <div class="section-title1">课程反馈：</div>
-        <div class="section-title1">课后作业：</div>
-         -->
-         
-        <h2>第2课：圆的方程</h2>
-        
-        <div class="section-title1">课前预习任务：</div>
-        <div class="section-title">1、观看视频：</div>
-        <ul class="video-list">
-            <li>
-                <a href="https://www.bilibili.com/video/BV147411K7xu?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29&p=156" target="_blank">
-                [直线与圆]4 圆的标准方程
-                </a>
-            </li>
-            <li>
-                <a href="https://www.bilibili.com/video/BV147411K7xu?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29&p=157" target="_blank">
-                [直线与圆]5 圆的一般方程
-                </a>
-            </li>
-            <li>
-                <a href="https://www.bilibili.com/video/BV147411K7xu?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29&p=158" target="_blank">
-                [直线与圆]6 直线与圆位置关系
-                </a>
-            </li>
-        </ul>
-
-        <div class="section-title">2、重点掌握：标准方程与一般方程转化、圆的几何性质</div>
-        <ul class="point-list">
-             <li>圆的标准方程 (x-a)²+(y-b)²=r² 推导（几何定义）</li>
-             <li>圆的一般方程 x²+y²+Dx+Ey+F=0 → 配方法求圆心半径</li>
-             <li>点/直线与圆的位置关系（代数法：Δ&gt;0,=0,&lt;0；几何法：d vs r）</li>
-             <li>圆的对称性应用（圆心在直线/点上）</li>
-             <li>弦长问题：垂径定理 + 弦长公式 √(1+k²)·|x₁-x₂|</li>
-             <li>综合应用：求过圆上一点的切线方程（活用圆心连线⊥切线）</li>
-        </ul>
-
-        <div class="section-title">3、作业：</div>
-          <!-- 
-        <ul class="homework">
-            <li>学习涂教材2.4、2.5.1中的知识点并完成例题。</li>
-        </ul>
-      这是注释内容
-        <div class="section-title1">课程反馈：</div>
-        <div class="section-title1">课后作业：</div>
-         -->
-        
-          <h2>第3课：直线与圆综合</h2>
-        
-        <div class="section-title1">课前预习任务：</div>
-        <div class="section-title">1、观看视频：</div>
-        <ul class="video-list">
-            <li>
+        <!-- 第3课 -->
+        <div class="lesson-header" onclick="toggleLesson('3')">
+            <span class="arrow" id="arrow-3">▼</span>
+            第3课：直线与圆综合
+        </div>
+        <div class="lesson-content" id="lesson-content-3">
+            <div class="section-title1">课前预习任务：</div>
+            <div class="section-title">1、观看视频：</div>
+            <ul class="video-list">
+                <li>
                 <a href="https://www.bilibili.com/video/BV147411K7xu?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29&p=159" target="_blank">
                 [直线与圆]7 圆与圆的位置关系
                 </a>
-            </li>
-            <li>
+                </li>
+                <li>
                 <a href="https://www.bilibili.com/video/BV147411K7xu?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29&p=160" target="_blank">
                 [直线与圆]8 直线与圆的最值问题
                 </a>
-            </li>
-        </ul>
-
-        <div class="section-title">2、重点掌握：代数与几何方法融合</div>
+                </li>
+            </ul>
+            <div class="section-title">2、重点掌握：代数与几何方法融合</div>
         <ul class="point-list">
              <li>直线与圆相交的最值问题（如：圆上点到直线距离最值）</li>
              <li>两圆的位置关系（外离/外切/相交/内切/内含 → d与|r₁±r₂|比较）</li>
@@ -196,13 +209,44 @@
         <div class="section-title1">课程反馈：</div>
         <div class="section-title1">课后作业：</div>
          -->
-        
-        <h2>第4-6课：椭圆</h2>
-        <h2>第7-9课：双曲线</h2>
-        <h2>第10-11课：抛物线</h2>
-        <h2>第13课：综合应用与解题策略</h2>
-        
-        
+            
+        </div>
+ 
+               <!-- 后续课程标题与内容可继续按同样结构添加 -->
+        <div class="lesson-header" style="cursor:default;">
+            第4-6课：椭圆
+        </div>
+        <div class="lesson-header" style="cursor:default;">
+            第7-9课：双曲线
+        </div>
+        <div class="lesson-header" style="cursor:default;">
+            第10-11课：抛物线
+        </div>
+        <div class="lesson-header" style="cursor:default;">
+            第13课：综合应用与解题策略
+        </div>
     </div>
+    <script>
+        function toggleLesson(num) {
+            const content = document.getElementById('lesson-content-' + num);
+            const arrow = document.getElementById('arrow-' + num);
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                arrow.textContent = "▼";
+                arrow.style.transform = "rotate(0deg)";
+            } else {
+                content.style.display = "none";
+                arrow.textContent = "▶";
+                arrow.style.transform = "rotate(-90deg)";
+            }
+        }
+        // 默认全部展开
+        window.onload = function() {
+            ['1', '2'].forEach(function(num) {
+                let content = document.getElementById('lesson-content-' + num);
+                if (content) content.style.display = "block";
+            });
+        }
+    </script>
 </body>
 </html>
