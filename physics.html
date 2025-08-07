@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>8月数学新课学习计划表 - 第1课：直线方程</title>
+    <style>
+        body {
+            font-family: "微软雅黑", "Arial", sans-serif;
+            background: #f6f8fa;
+            color: #222;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 32px 36px 36px 36px;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+        }
+        h1 {
+            color: #2368db;
+            margin-bottom: 8px;
+            font-size: 2em;
+        }
+        .lesson-header {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            border-left: 5px solid #2368db;
+            padding-left: 12px;
+            font-size: 1.3em;
+            color: #17408b;
+            margin: 30px 0 10px 0;
+            font-weight: bold;
+        }
+        .arrow {
+            transition: transform 0.2s;
+            margin-right: 8px;
+            font-size: 1.1em;
+        }
+        .lesson-content {
+            margin-left: 22px;
+            margin-bottom: 18px;
+        }
+        .section-title {
+            color: #2a6bb6;
+            font-weight: bold;
+            margin-top: 18px;
+            margin-bottom: 6px;
+            font-size: 1.08em;
+        }
+        .section-title1 {
+            background: #f9f1e7;
+            border-left: 5px solid #f4b183;
+            margin: 10px 0 15px 0;
+            padding: 10px 14px;
+            color: #2a6bb6;
+            font-weight: bold;
+            margin-top: 18px;
+            margin-bottom: 6px;
+            font-size: 1.08em;
+        }
+        .video-list li {
+            margin-bottom: 7px;
+        }
+        .point-list li {
+            margin-bottom: 5px;
+        }
+        .homework {
+            color: #e55353;
+            margin-bottom: 5px;
+            font-size: 1.05em;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 10px; }
+            h1 { font-size: 1.25em;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>8月物理新课学习计划表</h1>
+        
+        <!-- 第1课 -->
+        <div class="lesson-header" onclick="toggleLesson('1')">
+            <span class="arrow" id="arrow-1">▼</span>
+            第1课：电荷与库仑定律
+        </div>
+        <div class="lesson-content" id="lesson-content-1">
+            <div class="section-title">课程时间：2025/8/9  16：00-18：00</div>
+            <div class="section-title1">课前预习任务：</div>
+            <div class="section-title">1、观看视频：</div>
+            <ul class="video-list">
+                <li>
+                    <a href="https://www.bilibili.com/video/BV1R4411w72C/?spm_id_from=333.1387.collection.video_card.click&vd_source=67d09bbb1c5f7e9603562260f8ee2d29" target="_blank">
+                    141.【高中物理选修3-1】【电场】课前知识
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bilibili.com/video/BV1m4411w7Yo?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29" target="_blank">
+                    142.【高中物理选修3-1】【电场】电荷和元电荷
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bilibili.com/video/BV1D4411w71L?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29" target="_blank">
+                    143.【高中物理选修3-1】【电场】三种起电方式
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bilibili.com/video/BV1Q4411w7fr?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29" target="_blank">
+                    144.【高中物理选修3-1】【电场】库仑定律
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bilibili.com/video/BV17t411J7y9/?spm_id_from=333.1387.collection.video_card.click&vd_source=67d09bbb1c5f7e9603562260f8ee2d29" target="_blank">
+                    149.【高中物理选修3-1】【电场】三种起电方式-基础
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bilibili.com/video/BV17t411J76X?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29" target="_blank">
+                    150.【高中物理选修3-1】【电场】三种起电方式-接地
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bilibili.com/video/BV17t41177TQ?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29" target="_blank">
+                    152.【高中物理选修3-1】【电场】库仑定律三点共线
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bilibili.com/video/BV1it41177X5?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29" target="_blank">
+                    153.【高中物理选修3-1】【电场】三点共线做题
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bilibili.com/video/BV1Kt411E7ps?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29" target="_blank">
+                    154.【高中物理选修3-1】【电场】库仑定律动态平衡
+                    </a>
+                </li>
+            </ul>
+
+            <div class="section-title">2、重点掌握：</div>
+            <ul class="point-list">
+                <li>电荷种类（正/负）、起电方式（摩擦/感应/接触）</li>
+                <li>库仑定律：F=kQ₁Q₂/r²（对比万有引力定律）</li>
+                <li>关键训练：点电荷间力的合成（同一直线/成角度）</li>
+                <li>实验：验电器检验电荷、静电摆球演示库仑力</li>
+            </ul>
+
+            <div class="section-title">3、作业：</div>
+            <ul class="homework">
+                <li>学习涂教材第1节电荷、第2节库仑定律中的知识点并完成例题。</li>
+            </ul>
+        </div>
+        
+        <!-- 第2课 -->
+        <div class="lesson-header" onclick="toggleLesson('2')">
+            <span class="arrow" id="arrow-2">▼</span>
+            第2课：电场强度与电场线
+        </div>
+        <div class="lesson-content" id="lesson-content-2">
+        	<div class="section-title">课程时间：</div>
+            <div class="section-title1">课前预习任务：</div>
+            <div class="section-title">1、观看视频：</div>
+            <ul class="video-list">
+                <li>
+                    <a href="https://www.bilibili.com/video/BV1Q4411w7hM?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29" target="_blank">
+                    145.【高中物理选修3-1】【电场】电场与电场强度
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bilibili.com/video/BV1p4411A75a?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29" target="_blank">
+                    146.【高中物理选修3-1】【电场】电场线
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bilibili.com/video/BV1p4411c7fh?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29" target="_blank">
+                    147.【高中物理选修3-1】【电场】电场线2
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bilibili.com/video/BV1v4411c7jJ?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29" target="_blank">
+                    148.【高中物理选修3-1】【电场】电场中的功能势
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bilibili.com/video/BV1Mt411E7QR?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29" target="_blank">
+                    155.【高中物理选修3-1】【电场】库仑定律电场强度复习
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bilibili.com/video/BV1Jt411E7kB?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29" target="_blank">
+                    156.【高中物理选修3-1】【电场】俩个等量电荷的电场强度总结
+                    </a>
+                </li>
+            </ul>
+
+            <div class="section-title">2、重点掌握：标准方程与一般方程转化、圆的几何性质</div>
+            <ul class="point-list">
+                 <li>电场强度定义：E=F/q（矢量性、比值定义法）</li>
+                 <li>点电荷场强：E=kQ/r² 推导（对比库仑力公式）</li>
+                 <li>电场线性质：疏密表强弱、切线表方向、不相交</li>
+                 <li>典型电场线：点电荷、等量同/异种电荷、匀强电场</li>
+            </ul>
+
+            <div class="section-title">3、作业：</div>
+            <!--
+            <ul class="homework">
+                <li>学习涂教材2.4、2.5.1中的知识点并完成例题。</li>
+            </ul>
+            -->
+        </div>
+
+ 
+        <!-- 第3课 -->
+        <div class="lesson-header" onclick="toggleLesson('3')">
+            <span class="arrow" id="arrow-3">▼</span>
+            第3课：场强叠加原理与应用
+        </div>
+        <div class="lesson-content" id="lesson-content-3">
+            <div class="section-title1">课前预习任务：</div>
+            <div class="section-title">1、观看视频：</div>
+            <ul class="video-list">
+                <li>
+                <a href="https://www.bilibili.com/video/BV1Zt411P7qE?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29" target="_blank">
+                157.【高中物理选修3-1】【电场】基础场强叠加
+                </a>
+                </li>
+                <li>
+                <a href="https://www.bilibili.com/video/BV13t411N7oE?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29" target="_blank">
+                158.【高中物理选修3-1】【电场】特殊场强叠加思路
+                </a>
+                </li>
+                <li>
+                <a href="https://www.bilibili.com/video/BV1Nt411N7DD?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29" target="_blank">
+                159.【高中物理选修3-1】【电场】金属板场强叠加思路
+                </a>
+                </li>
+                <li>
+                <a href="https://www.bilibili.com/video/BV1Wt411N7Hs?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29" target="_blank">
+                160.【高中物理选修3-1】【电场】场强叠加-对称性
+                </a>
+                </li>
+                <li>
+                <a href="https://www.bilibili.com/video/BV1Wt411N7nR?spm_id_from=333.788.videopod.sections&vd_source=67d09bbb1c5f7e9603562260f8ee2d29" target="_blank">
+                161.【高中物理选修3-1】【电场】场强叠加-多点电荷
+                </a>
+                </li>
+            </ul>
+            <div class="section-title">2、重点掌握：</div>
+        <ul class="point-list">
+             <li>场强叠加：矢量合成法（练：两电荷连线/中垂线上场强）</li>
+             <li>特殊模型：
+等量同种电荷中点：E=0
+等量异种电荷中点：E=2kQ/r²（指向负电荷）</li>
+             <li>静电屏蔽：金属空腔内部场强为零（法拉第笼）</li>
+        </ul>
+
+        <div class="section-title">3、作业：</div>
+          <!-- 
+        <ul class="homework">
+            <li>学习涂教材2.4、2.5.1中的知识点并完成例题。</li>
+        </ul>
+      这是注释内容
+        <div class="section-title1">课程反馈：</div>
+        <div class="section-title1">课后作业：</div>
+         -->
+            
+        </div>
+        
+        
+          <!-- 第4课 -->
+        <div class="lesson-header" onclick="toggleLesson('4')">
+            <span class="arrow" id="arrow-4">▼</span>
+            第4课：静电的防止和利用
+        </div>
+        <div class="lesson-content" id="lesson-content-4">
+            <div class="section-title1">课前预习任务：</div>
+            <div class="section-title">1、观看视频：</div>
+            <ul class="video-list">
+            </ul>
+            <div class="section-title">2、重点掌握：代数与几何方法融合</div>
+        <ul class="point-list">
+             <li>导体静电平衡条件：E_内=0，电荷只分布在外表面</li>
+             <li>尖端放电：避雷针原理</li>
+             <li>静电应用与防护：除尘器、复印机、防静电手环</li>
+        </ul>
+
+        <div class="section-title">3、作业：</div>
+         </div>
+ 
+               <!-- 后续课程标题与内容可继续按同样结构添加 -->
+               
+ 
+        <div class="lesson-header" style="cursor:default;">
+            第5-9课：静电场中的能量
+        </div>
+    </div>
+    
+    
+    
+    <script>
+        function toggleLesson(num) {
+            const content = document.getElementById('lesson-content-' + num);
+            const arrow = document.getElementById('arrow-' + num);
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                arrow.textContent = "▼";
+                arrow.style.transform = "rotate(0deg)";
+            } else {
+                content.style.display = "none";
+                arrow.textContent = "▶";
+                arrow.style.transform = "rotate(-90deg)";
+            }
+        }
+        // 默认全部展开
+        window.onload = function() {
+            ['1', '2'].forEach(function(num) {
+                let content = document.getElementById('lesson-content-' + num);
+                if (content) content.style.display = "block";
+            });
+        }
+    </script>
+</body>
+</html>
